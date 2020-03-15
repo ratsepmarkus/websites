@@ -8,23 +8,36 @@
 </head>
 <body>
     <header>
-        <div class="heading"></div>
+        <div class="heading">
+            <div class="switch-text">Dark theme</div>
+            <label id="switch" class="switch">
+                <input type="checkbox" onchange="toggleTheme()" id="slider">
+                <span class="slider round"></span>
+            </label>
             <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
             <label for="openSidebarMenu" class="sidebarIconToggle">
                 <div class="spinner diagonal part-1"></div>
                 <div class="spinner horizontal"></div>
                 <div class="spinner diagonal part-2"></div>
             </label>
-        <div id="sidebarMenu">
-            <ul class="sidebarMenuInner">
-            <li><a href="#" target="_blank">Link</a></li>
-            <li><a href="#" target="_blank">Link</a></li>
-            <li><a href="#" target="_blank">Link</a></li>
-            <li><a href="#" target="_blank">Link</a></li>
-            <li><a href="#" target="_blank">Link</a></li>
-            </ul>
+            <div id="sidebarMenu">
+                <ul class="sidebarMenuInner">
+                <li><a href="#" target="_blank">Link</a></li>
+                <li><a href="#" target="_blank">Link</a></li>
+                <li><a href="#" target="_blank">Link</a></li>
+                <li><a href="#" target="_blank">Link</a></li>
+                <li><a href="#" target="_blank">Link</a></li>
+                </ul>
+            </div>
         </div>
     </header>
+    <div class="web-title">
+        <img class="web-logo" src="fanta-6.svg" >
+        <h1 class="title">YOUR WEBSITE</h1>
+        <div class="description">
+            <p>Lorem ipsum dolor sit amet consectetur elit.</p>
+        </div>
+    </div>
     <div>
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
         viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
@@ -32,17 +45,19 @@
         <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
         </defs>
         <g class="parallax">
-        <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
-        <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
-        <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
-        <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
+        <use xlink:href="#gentle-wave" x="48" y="0" fill="var(--color-wave3)" />
+        <use xlink:href="#gentle-wave" x="48" y="3" fill="var(--color-wave)" />
+        <use xlink:href="#gentle-wave" x="48" y="5" fill="var(--color-wave2)" />
+        <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--color-primary)" />
         </g>
         </svg>
         </div>
     <div class="main">
     </div>
     <img class="wave-down" src="wave-footer-2.png" >
-
+    
+        
+        
     <script src="app.js"></script>
 </body> 
 </html>
