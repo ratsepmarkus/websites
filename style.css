@@ -9,18 +9,15 @@
 
 body {
     background: rgb(217,11,223);
-    background: linear-gradient(270deg, rgb(228, 24, 126) 0%, rgba(66,88,255,1) 100%);
+    background: var(--color-bg);
 }
 
 html {
     height: 100%;
-    overflow: visible;
 }
 
-
-
 .heading {
-    display: block;
+    display: flex;
     margin: 0 auto;
     width: 100%;
     max-width: 100%;
@@ -30,7 +27,10 @@ html {
     height: 60px!important;
     overflow: hidden;
     z-index: 10;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.50);
+    border-bottom: 2px solid var(--color-accent);
+    justify-content: flex-end;
+    flex-direction: row;
+    align-items: center;
 }
 
 #sidebarMenu {
@@ -38,7 +38,7 @@ html {
     position: fixed;
     left: 0;
     width: 250px;
-    margin-top: 60px;
+    margin-top: 178px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
     background-color: rgba(252, 70, 106, 90%);
@@ -46,7 +46,6 @@ html {
 .sidebarMenuInner{
     margin:0;
     padding:0;
-    border-top: 1px solid rgba(255, 255, 255, 0.30);
 }
 .sidebarMenuInner li{
     list-style: none;
@@ -143,8 +142,31 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-top: -9px;
 }
 
+.web-title {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 70px;
+  color: white;
+  margin-top: 10px;
+}
+
+.description {
+  margin-top: 3px;
+  color: var(--color-primary);
+}
+
+.web-logo {
+  height:100px;
+}
+
 .main {
-    background-color: white;
+    background-color: var(--color-primary);
     height: 1000px;
     margin: 0px;
 }
@@ -157,7 +179,6 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     margin-bottom: 500px;
 }
 
-
 .waves {
   position:relative;
   width: 100%;
@@ -165,14 +186,14 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   margin-bottom:-7px; /*Fix for safari gap*/
   min-height:100px;
   max-height:150px;
-  margin-top: 500px;
+  margin-top: 0px;
 }
 
 .content {
   position:relative;
   height:20vh;
   text-align:center;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
 }
 
 /* Animation */
@@ -210,4 +231,106 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     height:40px;
     min-height:40px;
   }
+}
+
+.theme-dark {
+  --color-primary: #ffffff;
+  --color-secondary: rgba(252, 70, 106, 90%);
+  --color-accent: #b4b4b4;
+  --font-color: #000000;
+  --color-bg: linear-gradient(270deg, rgb(228, 24, 126) 0%, rgba(66,88,255,1) 100%);
+  --color-wave:rgba(255,255,255,0.7);
+  --color-wave2:rgba(255,255,255,0.5);
+  --color-wave3:rgba(255,255,255,0.3);
+}
+.theme-light {
+  --color-primary: #000000;
+  --color-secondary: #000000;
+  --color-accent: #b4b4b4;
+  --font-color: #ffffff;
+  --color-bg: linear-gradient(270deg, rgb(182, 25, 103) 0%, rgb(45, 58, 160) 100%);
+  --color-wave:rgba(0, 0, 0, 0.7);
+  --color-wave2:rgba(0, 0, 0, 0.5);
+  --color-wave3:rgba(0, 0, 0, 0.3);
+}
+
+
+.container button {
+  color: var(--font-color);
+  background: var(--color-primary);
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+.switch-text {
+  margin-right: 10px;
+  color: white;
+}
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 33px;
+  margin-right: 20px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #b4b4b4;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 33px;
+  width: 33px;
+  left: 0px;
+  bottom: 4px;
+  top: 0;
+  bottom: 0;
+  margin: 0;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+input:checked + .slider {
+  background-color: var(--color-accent);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(24px);
+  -ms-transform: translateX(24px);
+  transform: translateX(24px);
+  background-color:#ffffff;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
 }
