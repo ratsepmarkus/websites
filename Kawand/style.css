@@ -1,0 +1,193 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body {
+    background-image: url('background-house.png');
+    background-size: 100%;
+    background-size: cover;                     
+    background-repeat: no-repeat;
+    background-position: center center;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.container {
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.logo {
+    display: flex;
+    height: 60px;
+}
+
+.info-text {
+    color: white;
+    display: flex;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.text {
+    display: flex;
+    width: 60%;
+    line-height: 1.5em;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+}
+   
+a {
+    color: white;
+}
+
+.info-box {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.box1-heading {
+    margin-bottom: 30px;
+}
+
+.box1-text {
+    margin-bottom: 20px;
+}
+
+a:hover {
+    color: rgb(156, 156, 156);
+    transition: ease 0.2s;
+}
+
+.info-box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px;
+    width: auto;
+}
+
+.box2-heading {
+    margin-bottom: 30px;
+}
+
+.box2-email {
+    margin-bottom: 30px;
+}
+
+.info-box3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 40px;
+    width: auto;
+}
+
+.box3-heading {
+    margin-bottom: 30px;
+}
+
+.box3-email {
+    margin-bottom: 30px;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+    color: white;
+    margin: 50px;
+    text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+    .box-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .info-box2 {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+  }
+  .overlay:target {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .popup {
+    margin: 70px auto;
+    padding: 30px;
+    border-radius: 5px;
+    background-color: white;
+    border: black solid 1px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+    color: black;
+  }
+  
+  .popup h2 {
+    margin-top: 0;
+    color: black;
+    margin-bottom: 20px;
+  }
+  .popup .close {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    
+  }
+  
+  .popup .content {
+    max-height: 30%;
+    overflow: auto;
+  }
